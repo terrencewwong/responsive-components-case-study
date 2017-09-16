@@ -17,6 +17,10 @@ export default () => (
       <Spacer bottom={1.5}>
         <Text size='size2' bold>Welcome to GOV.UK</Text>
       </Spacer>
+      <Spacer bottom={2}>
+        <Text size='sizen1'>The best place to find government services and information</Text>
+        <Text size='sizen1' bold>Simpler, clearer, faster</Text>
+      </Spacer>
     </WebpageLayout>
   </BaseStyles>
 )

@@ -2,12 +2,16 @@ module.exports = {
   unit: 10,
   unitType: "px",
   typeScale: {
-    sizen1: `
+    sizen3: `
       font-size: 12px;
       line-height: 15px;
     `,
-    size0: `
+    sizen2: `
       font-size: 14px;
+      line-height: 20px;
+    `,
+    sizen1: `
+      font-size: 16px;
       line-height: 20px;
     `,
     size0: `
