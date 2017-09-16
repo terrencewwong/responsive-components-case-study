@@ -24,6 +24,6 @@ const Ul= Text.withComponent('ul').extend`
 
 export const LinkMenu = ({ children, ...rest }) => (
   <Ul {...rest}>
-    {children.map(child => <li>{child}</li>)}
+    {children.map((child, index) => <li key={index}>{child}</li>)}
   </Ul>
 )
