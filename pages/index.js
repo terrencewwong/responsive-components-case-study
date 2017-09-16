@@ -1,7 +1,7 @@
 import React from 'react'
 import styled, { injectGlobal } from 'styled-components'
 import { Spacer, WebpageLayout } from '../design-system/layouts'
-import { Text } from '../design-system/atoms'
+import { Input, Text } from '../design-system/atoms'
 import { BaseStyles } from '../design-system/utils'
 
 injectGlobal`
@@ -20,6 +20,9 @@ export default () => (
       <Spacer bottom={2}>
         <Text size='sizen1'>The best place to find government services and information</Text>
         <Text size='sizen1' bold>Simpler, clearer, faster</Text>
+      </Spacer>
+      <Spacer bottom={3}>
+        <Input placeholder='Search GOV.UK' />
       </Spacer>
     </WebpageLayout>
   </BaseStyles>
