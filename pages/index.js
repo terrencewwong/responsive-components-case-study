@@ -1,9 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
+import { WebpageLayout } from '../design-system/layouts'
+import { Text } from '../design-system/atoms'
 
-const Title = styled.h1`
-  color: red;
-  font-size: 50px;
-`
-
-export default () => <Title>My page</Title>
+export default () => (
+  <WebpageLayout maxWidth='1020px' padding={[2.5, 2, 0, 2]}>
+    <Text size='size3' bold>My page</Text>
+  </WebpageLayout>
+)
