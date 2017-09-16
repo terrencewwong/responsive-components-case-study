@@ -1,0 +1,18 @@
+{
+  "name": "responsive-components-case-study",
+  "repository": "https://github.com/terrencewwong/responsive-components-case-study.git",
+  "author": "Terrence Wong <wongterrencew@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "babel-plugin-styled-components": "^1.1.5",
+    "next": "latest",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "styled-components": "^2.1.0"
+  }
+}
