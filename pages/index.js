@@ -15,7 +15,7 @@ export default () => (
   <BaseStyles>
     <WebpageLayout maxWidth='1020px' padding={[2.5, 2, 0, 2]}>
       <Spacer bottom={1.5}>
-        <Text size='size3' bold>Welcome to GOV.UK</Text>
+        <Text size='size2' bold>Welcome to GOV.UK</Text>
       </Spacer>
     </WebpageLayout>
   </BaseStyles>
