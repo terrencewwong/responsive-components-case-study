@@ -6,9 +6,10 @@ const Spacer = styled.div`
     const { spacing, top, bottom ,left, right } = props
 
     if (spacing) {
-      return spacing
+      const marginValues = spacing
         .map(spaceScale => spaceScale * unit + unitType)
-        .join(' ') + ';'
+        .join(' ')
+      return `margin: ${marginValues};`
     } else {
       const css = []
 
