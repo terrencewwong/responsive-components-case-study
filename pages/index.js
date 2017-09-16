@@ -24,6 +24,10 @@ export default () => (
       <Spacer bottom={3}>
         <Input placeholder='Search GOV.UK' />
       </Spacer>
+
+      <Spacer bottom={0.5}>
+        <Text size='sizen3'>Popular on GOV.UK</Text>
+      </Spacer>
     </WebpageLayout>
   </BaseStyles>
 )
