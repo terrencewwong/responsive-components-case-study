@@ -30,5 +30,10 @@ module.exports = {
       font-size: 48px;
       line-height: 50px;
     `
+  },
+  breakpoints: {
+    phone: '421px',
+    tablet: '769px',
+    tabletLandscape: '1025px'
   }
 }
