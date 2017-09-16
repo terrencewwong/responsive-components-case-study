@@ -1,10 +1,20 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { injectGlobal } from 'styled-components'
 import { WebpageLayout } from '../design-system/layouts'
 import { Text } from '../design-system/atoms'
+import { BaseStyles } from '../design-system/utils'
+
+injectGlobal`
+  * {
+    margin: 0;
+    box-sizing: border-box;
+  }
+`
 
 export default () => (
-  <WebpageLayout maxWidth='1020px' padding={[2.5, 2, 0, 2]}>
-    <Text size='size3' bold>My page</Text>
-  </WebpageLayout>
+  <BaseStyles>
+    <WebpageLayout maxWidth='1020px' padding={[2.5, 2, 0, 2]}>
+      <Text size='size3' bold>Welcome to GOV.UK</Text>
+    </WebpageLayout>
+  </BaseStyles>
 )
