@@ -5,9 +5,11 @@ import { Text, Link, LinkMenu } from '../design-system/atoms'
 const PopularLinks = ({ className }) => (
   <Container className={className} bottom={2}>
     <Spacer bottom={0.5}>
-      <Text size='sizen3'>Popular on GOV.UK</Text>
+      <Text breakpoint='tablet' size={['sizen3', 'sizen2']}>
+        Popular on GOV.UK
+      </Text>
     </Spacer>
-    <LinkMenu size='sizen2' bold>
+    <LinkMenu breakpoint='tablet' size={['sizen2', 'size0']} bold>
       <Link href='#'>Universal Jobmatch job search</Link>
       <Link href='#'>Renew vehicle tax</Link>
       <Link href='#'>Log in to student finance</Link>
