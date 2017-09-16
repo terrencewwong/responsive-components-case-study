@@ -1,15 +1,8 @@
 import React from 'react'
-import styled, { injectGlobal } from 'styled-components'
+import styled from 'styled-components'
 import { Spacer, WebpageLayout } from '../design-system/layouts'
 import { Input, Text } from '../design-system/atoms'
 import { BaseStyles } from '../design-system/utils'
-
-injectGlobal`
-  * {
-    margin: 0;
-    box-sizing: border-box;
-  }
-`
 
 export default () => (
   <BaseStyles>

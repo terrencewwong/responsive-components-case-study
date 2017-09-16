@@ -15,6 +15,14 @@ export default class MyDocument extends Document {
         <Head>
           <title>My page</title>
           <meta name='viewport' content='width=device-width, initial-scale=1' />
+          <style>
+            {`
+              * {
+                margin: 0;
+                box-sizing: border-box;
+              }
+            `}
+          </style>
           {this.props.styleTags}
         </Head>
         <body>
