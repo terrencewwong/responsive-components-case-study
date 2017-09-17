@@ -3,7 +3,7 @@ import { Container, Spacer } from '../design-system/layouts'
 import { Text, Link, LinkMenu } from '../design-system/atoms'
 
 const PopularLinks = ({ className }) => (
-  <Container className={className} bottom={2}>
+  <Container className={className}>
     <Spacer bottom={0.5}>
       <Text breakpoint='tablet' size={['sizen3', 'sizen2']}>
         Popular on GOV.UK

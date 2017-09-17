@@ -11,12 +11,29 @@ export default () => (
   <BaseStyles>
     <WebpageLayout maxWidth='1020px' padding={[2.5, 2, 0, 2]}>
       <ColumnDrop breakpoint='tablet'>
-        <Column width='66.66%'>
+        <Column
+          size={['full', '66.66%']}
+          margin={[
+            [0],
+            [0, 3, 0, 0]
+          ]}
+        >
           <Spacer bottom={3}>
             <WelcomeSection />
           </Spacer>
         </Column>
-        <Column width='33.33%'>
+        <Column
+          size={['full', 'remaining']}
+          padding={[
+            [0, 0, 2, 0],
+            [2]
+          ]}
+          margin={[
+            [0],
+            [0.5, 0, 0, 0]
+          ]}
+          responsiveCSS={['', 'background-color: black;']}
+        >
           <PopularLinks />
         </Column>
       </ColumnDrop>
