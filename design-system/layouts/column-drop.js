@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import {
   castToArray as array,
+  compileResponsiveRules,
   media,
   marginCSS,
   paddingCSS,
@@ -45,7 +46,7 @@ const mapPropsToCSS = ({
   const [ defaultSize, ...sizes ] = array(size)
   const [ defaultMargin, ...margins ] = array(margin)
   const [ defaultPadding, ...paddings ] = array(padding)
-  const [ defaultCSS, ...css ] = array(responsiveCSS)
+  const [ defaultCSS, ...cssStrings ] = array(responsiveCSS)
   const breakpoints = array(breakpoint)
 
   const rules = [
@@ -55,21 +56,17 @@ const mapPropsToCSS = ({
     defaultCSS
   ]
 
-  const responsiveRules = breakpoints.map((device, i) => {
-    const mediaQuery = media[device]
-
-    // need a join because of weird tagged template literal behaviour
-    return mediaQuery`
-      ${widthCSS(sizes[i])}
-      ${marginCSS(margins[i])}
-      ${paddingCSS(paddings[i])}
-      ${css[i]}
-    `.join('')
+  const responsiveRules = compileResponsiveRules({
+    breakpoints,
+    margins,
+    paddings,
+    sizes,
+    cssStrings
   })
 
   return [
     ...rules,
-    ...responsiveRules
+    responsiveRules
   ].join('')
 }
 
