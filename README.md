@@ -12,6 +12,8 @@ Here are the three main approaches:
 
 To really understand this question, I implemented a small portion of the homepage for [gov.uk](https://gov.uk). My design makes simplifications where necessary so as to only focus on the responsiveness problem (ex. I do not have a magnifying glass icon in my search bar)
 
+If you'd like to see my version click [here](https://responsive-components-case-study-tjdvuuhddw.now.sh/).
+
 My implementation has a single breakpoint at 769px, i.e. there are two main views a user can see. The layout for tablet devices and smaller or the layout for devices larger than tablets.
 
 __Layout for tablet and smaller__
