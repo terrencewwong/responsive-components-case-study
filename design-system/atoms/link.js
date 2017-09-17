@@ -2,9 +2,10 @@ import Text from './text'
 
 const Link = Text.withComponent('a').extend`
   font: inherit;
+  color: inherit;
 
   :visited {
-    color: white;
+    color: inherit;
   }
 
   :hover {
