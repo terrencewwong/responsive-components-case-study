@@ -579,9 +579,40 @@ The refactor here also isn't so much work. For demonstrative purposes I've chose
      </Spacer>
 ```
 
-This wasn't so bad, but I would argue that this type of solution is not very scalable. Imagine your component had a lot more children that needed to be responsive. You could end up with a list of props like `textThingSize`, `otherTextThingSize`, `containerForSomeStuffPadding`, `otherContainerForSomeStuffPadding`, etc.
+This wasn't so bad, but I would argue that this type of solution is not very scalable. Let's say we also needed to make the spacing between the title and the description responsive.
 
-As well, it makes it a lot more difficult for designers to use the component. How would you explain to a designer, "There's no mobile version of this component. Well there is... because it depends on where it is rendered... but it's the parent who controls how it is rendered. Anyways if you want to preview the mobile version of this component you should render it with these props."
+```diff
+ const WelcomeSection = ({
+   className,
+   breakpoint,
+   titleSize,
+-  descriptionSize
++  descriptionSize,
++  titleDescriptionSpacing
+ }) => (
+   <Container className={className}>
+-    <Spacer bottom={1.5}>
++    <Spacer breakpoint={breakpoint} bottom={titleDescriptionSpacing}>
+       <Text breakpoint={breakpoint} size={titleSize} bold>
+         Welcome to GOV.UK
+       </Text>
+     </Spacer>
+     <Spacer bottom={2}>
+       <Text breakpoint={breakpoint} size={descriptionSize}>
+         The best place to find government services and information
+       </Text>
+       <Text breakpoint={breakpoint} size={descriptionSize} bold>
+         Simpler, clearer, faster
+       </Text>
+     </Spacer>
+     <Input placeholder='Search GOV.UK' />
+   </Container>
+ )
+```
+
+We've added a third prop that needs to be controlled from the outside but it's starting to feel a bit weird. Do we really want to control the spacing between the title and the description from the outside like this? What if we were implementing a component that has a lot more responsive behaviour? You could imagine our props like growing and growing.
+
+The other problem with controlling responsiveness from the outside is that it makes it a lot more difficult for designers to use the component. How would you explain to a designer, "There's no mobile version of this component. Well there is... because it depends on where it is rendered... but it's the parent who controls how it is rendered. Anyways if you want to preview the mobile version of this component you should render it with these props."
 
 #### How to build a design system with USA Today
 
